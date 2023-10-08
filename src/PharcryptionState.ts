@@ -218,7 +218,7 @@ async function attemptLogin(address: string, username: string, password: string)
         }
 
         // Update decrypted.
-        if (packet.key === "Pharcryption__Decrypted") {
+        if (packet.key === "Pharcryption__Decrypted" && packet.value) {
             PharcryptionState.state._func.decrypt();
         }
     });
