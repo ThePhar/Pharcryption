@@ -1,0 +1,155 @@
+.Desktop {
+
+}
+
+.Desktop__taskbar {
+    z-index: 999999999;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: url("../assets/active-bar.png");
+    background-size: 2px 36px;
+    background-repeat: repeat-x;
+    color: white;
+
+    & .Desktop__taskbar__applications {
+        display: flex;
+        gap: 4px;
+        flex-grow: 1;
+        margin: 0 0.25rem;
+
+        & [hidden] {
+            display: none;
+        }
+
+        & div {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            user-select: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+            max-width: 172px;
+            flex-grow: 1;
+            height: 36px;
+            padding: 0 10px;
+            border: 2px solid;
+            background-color: rgba(16, 57, 118, 0.774);
+            border-top-color: rgba(9, 101, 171, 0.8);
+            border-left-color: rgba(19, 52, 171, 0.5);
+            border-right-color: rgba(19, 52, 171, 0.5);
+            border-bottom-color: rgba(0, 0, 0, 0.5);
+
+            &.active {
+                background-color: rgba(34, 147, 213, 0.774);
+                border-top-color: rgba(28, 156, 255, 0.8);
+            }
+
+            &.active:hover {
+                background-color: rgba(38, 160, 232, 0.774);
+                border-top-color: rgba(43, 160, 249, 0.8);
+            }
+
+            &:hover {
+                background-color: rgba(19, 69, 144, 0.774);
+                border-top-color: rgba(14, 114, 190, 0.8);
+            }
+        }
+    }
+
+    & .Desktop__taskbar__system-tray {
+        background: url("../assets/taskbar_systemtray_background.png");
+        height: 36px;
+        background-size: 2px 36px;
+        background-repeat: repeat-x;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        align-items: center;
+        padding: 0 12px;
+        user-select: none;
+        line-height: 13px;
+
+        border-left: 2px solid rgba(7, 78, 125, 0.5);
+    }
+
+    & .Desktop__taskbar__start-button {
+        background: url("../assets/taskbar_start_background.png");
+        height: 36px;
+        background-size: 2px 36px;
+        background-repeat: repeat-x;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12px;
+        user-select: none;
+
+        border-right: 2px solid rgba(3, 63, 15, 0.5);
+
+        & .Desktop__taskbar__start-button--logo {
+            background: url("../assets/start_button.png");
+            width: 55px;
+            height: 14px;
+            background-size: 55px 14px;
+        }
+    }
+}
+
+#pharcoin_icon {
+    position: relative;
+    background: url("../assets/pharcoin.png");
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+
+    & #pharcoin_amount {
+        position: absolute;
+        bottom: -4px;
+        left: 14px;
+        text-align: left;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+}
+
+#current_time {
+    text-align: right;
+    width: 64px;
+}
+
+#background {
+    display: flex;
+    z-index: -999999990;
+    user-select: none;
+    color: red;
+    position: absolute;
+    background-color: black;
+    background: linear-gradient(0deg, rgb(14, 2, 2) 0%, rgb(4, 2, 2) 8%, rgb(14, 1, 1) 25%, rgba(0,0,0,1) 100%);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    &[hidden] {
+        display: none;
+    }
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+
+        & .highlight {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.APMessengerWindow {
+    background-color: #7690e0;
+    color: white;
+
+    & h3 {
+        font-weight: normal;
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.login_box {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.login_box button {
+    width: 246px;
+    width: 246px;
+}
+
+.apm_block {
+    display: flex;
+}
+
+.apm_label {
+    width: 100px;
+}
+
+.chat_box {
+}
+
+.chat_header {
+    background-color: #0647b1;
+    padding: 8px;
+}
+
+.messages {
+    background-color: white;
+    border: 2px solid #0446b1;
+    color: black;
+    padding: 4px 8px;
+    height: 340px;
+    overflow-y: scroll;
+}
+
+.textfield {
+    background: #e0d4cf;
+    color: black;
+}
+
+textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    height: 64px;
+    padding: 4px 8px;
+    margin: 0;
+    border: 2px solid #0446b1; 
+    border-bottom-width: 4px;
+    outline: none;
+}
+
+.name {
+    color: #888;
+}
+.quote {
+    margin-left: 8px;
+}

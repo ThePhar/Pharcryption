@@ -1,0 +1,94 @@
+.PharcryptionWindow {
+    background-color: #841212;
+    color: white;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+
+    & .mainbar {
+        width: 66%;
+
+        & h1 {
+            margin: 0.25rem 0 0.75rem 0;
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1rem;
+            font-family: "Superstar", "Monaco", "System", sans-serif;
+            text-align: center;
+            font-weight: normal;
+            user-select: none;
+        }
+
+        & strong {
+            text-decoration: underline;
+        }
+
+        & .explaination {
+            border: 2px solid #470a0a;
+            background-color: white;
+            color: black;
+            padding: 4px 8px;
+            max-height: 458px;
+            overflow-y: scroll;
+        }
+    }
+
+    & .sidebar {
+        width: 34%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+
+        & .block {
+            border: 2px solid rgb(212, 91, 91);
+            padding: 4px 8px;
+            text-align: center;
+
+            & span {
+                line-height: 0.5rem;
+            }
+
+            & h3 {
+                margin: 0;
+                margin-bottom: 0.25rem;
+                color: yellow;
+            }
+        }
+    }
+}
+
+.yellow {
+    color: yellow;
+    font-size: 2rem;
+}
+
+.lockbanner {
+    box-sizing: border-box;
+
+    background: rgb(212, 91, 91);
+    height: 60%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,6 @@
+export enum GamePhase {
+    DISCONNECTED = "DISCONNECTED",
+    PRE_GAME = "PRE-GAME",
+    IN_PROGRESS = "IN-PROGRESS",
+    POST_GAME = "POST-GAME",
+}

@@ -1,15 +1,18 @@
 /* @refresh reload */
-import { render } from 'solid-js/web';
+import { render } from "solid-js/web";
 
-import './index.css';
-import App from './App';
+import Application from "./components/Application";
 
-const root = document.getElementById('root');
+// Normalize CSS
+import "normalize.css/normalize.css";
+import "./index.css";
+
+const root = document.getElementById("root");
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
-  throw new Error(
-    'Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?',
-  );
+    throw new Error(
+        "Root element not found. Check index.html if it is defined.",
+    );
 }
 
-render(() => <App />, root!);
+render(() => <Application />, root!);

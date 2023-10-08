@@ -1,13 +1,42 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Monaco", "System", sans-serif;
+    background-color: #08549b;
+    image-rendering: pixelated;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+    border: 2px solid gray;
+    padding: 4px 8px;
+
+    &:active, &:focus {
+        outline: 2px solid #08549b;
+    }
+}
+
+label {
+    line-height: 32px;
+}
+
+button {
+    border: 2px solid gray;
+    padding: 4px 8px;
+
+    &:active, &:focus {
+        outline: 2px solid #08549b;
+    }
+}
+
+@font-face {
+    font-family: "Pixellari";
+    src: url("./assets/fonts/Pixellari.ttf");
+}
+
+@font-face {
+    font-family: "Superstar";
+    src: url("./assets/fonts/Superstar.ttf");
+}
+
+@font-face {
+    font-family: "Monaco";
+    src: url("./assets/fonts/Monaco.ttf");
 }
